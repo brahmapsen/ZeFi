@@ -74,10 +74,10 @@ export default function Address(props) {
 
   return (
     <span>
-      <span style={{verticalAlign:"middle"}}>
-        <Blockies seed={props.value.toLowerCase()} size={8} scale={4}/>
+      <span style={{verticalAlign:"bottom"}}>
+        <Blockies seed={props.value.toLowerCase()} size={7} scale={5}/>
       </span>
-      <span style={{verticalAlign:"middle",paddingLeft:5,fontSize:28}}>
+      <span style={{verticalAlign:"middle",paddingLeft:5,fontSize:18}}>
         {text}
       </span>
     </span>

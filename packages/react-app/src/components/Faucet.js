@@ -34,7 +34,7 @@ export default function Faucet(props) {
             setAddress(e.target.value)
           }}
           suffix={
-            <Tooltip title="Faucet: Send local ether to an address.">
+            <Tooltip title="Faucet: Send local ether">
               <Button onClick={()=>{
                 localTx({
                   to: address,

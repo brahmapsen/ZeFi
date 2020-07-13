@@ -42,7 +42,7 @@ export default function Balance(props) {
   }
 
   return (
-    <span style={{verticalAlign:"middle",fontSize:props.size?props.size:24,padding:8,cursor:'pointer'}} onClick={()=>{setDollarMode(!dollarMode)}}>
+    <span style={{verticalAlign:"middle",fontSize:props.size?props.size:16,padding:8,cursor:'pointer'}} onClick={()=>{setDollarMode(!dollarMode)}}>
       {displayBalance}
     </span>
   );

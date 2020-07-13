@@ -6,6 +6,17 @@ import { TokenBalance, Balance, Address, Wallet } from "."
 import { usePoller } from "../hooks"
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import { Button } from 'antd';
+import { ApiOutlined, AppleOutlined, AndroidOutlined, CodeOutlined, FolderAddOutlined, LoginOutlined, LogoutOutlined,
+  HddOutlined, SwapOutlined, LinkOutlined, SwitcherOutlined, ScanOutlined, ShakeOutlined, RocketOutlined,
+  AreaChart, DotChart, PieChart, Barcode, HourglassOutlined, PictureOutlined, SolutionOutlined,
+  AppstoreOutlined,
+  MenuUnfoldOutlined,
+  MenuFoldOutlined,
+  PieChartOutlined,
+  DesktopOutlined,
+  ContainerOutlined,
+  MailOutlined,
+} from '@ant-design/icons';
 
 const INFURA_ID = "2717afb6bf164045b5d5468031b93f87"  // MY INFURA_ID, SWAP IN YOURS!
 
@@ -74,11 +85,11 @@ export default function Account(props) {
   if(typeof props.setInjectedProvider == "function"){
     if (web3Modal.cachedProvider) {
       modalButtons.push(
-        <Button key="logoutbutton" style={{verticalAlign:"top",marginLeft:8,marginTop:4}} shape={"round"} size={"large"}  onClick={logoutOfWeb3Modal}>logout</Button>
+        <Button key="logoutbutton" style={{verticalAlign:"top",marginLeft:8,marginTop:4}} shape={"round"} size={"large"}  onClick={logoutOfWeb3Modal}><LogoutOutlined /></Button>
       )
     }else{
       modalButtons.push(
-        <Button key="loginbutton" style={{verticalAlign:"top",marginLeft:8,marginTop:4}} shape={"round"} size={"large"} type={props.minimized?"default":"primary"} onClick={loadWeb3Modal}>connect</Button>
+        <Button key="loginbutton" style={{verticalAlign:"top",marginLeft:8,marginTop:4}} shape={"round"} size={"large"} type={props.minimized?"default":"primary"} onClick={loadWeb3Modal}><LoginOutlined/></Button>
       )
     }
   }
@@ -97,7 +108,7 @@ export default function Account(props) {
     display = (
       <span>
         {props.address?(
-          <Address value={props.address} ensProvider={props.mainnetProvider}/>
+          <Address className="mini-bar" value={props.address} ensProvider={props.mainnetProvider}/>
         ):"Connecting..."}
         <Balance address={props.address} provider={props.localProvider} dollarMultiplier={props.price}/>
         <Wallet address={props.address} provider={props.injectedProvider} ensProvider={props.mainnetProvider} price={props.price} />

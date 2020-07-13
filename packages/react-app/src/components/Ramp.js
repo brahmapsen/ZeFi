@@ -14,15 +14,15 @@ export default function Ramp(props) {
       <Button size="large" shape="round" onClick={()=>{
         setModalUp("up")
       }}>
-        <DollarCircleOutlined style={{color:"#52c41a"}}/> {props.price.toFixed(2)}
+        <DollarCircleOutlined style={{color:"#52c41a"}}/> ${props.price.toFixed(2)} ETH
       </Button>
       <Modal
-         title="Buy ETH"
+         title="Purchase ETH"
          visible={modalUp==="up"}
          onCancel={()=>{setModalUp("down")}}
          footer={[
             <Button key="back" onClick={()=>{setModalUp("down")}}>
-              cancel
+              Hide
             </Button>
           ]}
        >

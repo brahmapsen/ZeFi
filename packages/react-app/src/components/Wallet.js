@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Blockies from 'react-blockies';
 import { Address, Balance, AddressInput, EtherInput } from "."
 import { Transactor } from "../helpers"
-import { WalletOutlined, QrcodeOutlined, SendOutlined } from '@ant-design/icons';
+import { BarcodeOutlined, WalletOutlined, QrcodeOutlined, SendOutlined } from '@ant-design/icons';
 import { Typography, Skeleton, Tooltip, Spin, Modal, Button } from 'antd';
 import QR from 'qrcode.react';
 import { ethers } from "ethers";
@@ -21,9 +21,9 @@ export default function Wallet(props) {
 
     providerSend = (
       <Tooltip title={"Wallet"}>
-        <WalletOutlined onClick={()=>{
+        <BarcodeOutlined onClick={()=>{
           setOpen(!open)
-        }} rotate={-90} style={{padding:7,color:props.color?props.color:"#1890ff",cursor:"pointer",fontSize:28,verticalAlign:"middle"}}/>
+        }} rotate={0} style={{padding:7,color:props.color?props.color:"black",cursor:"pointer",fontSize:28,verticalAlign:"middle"}}/>
       </Tooltip>
     )
   }
@@ -103,7 +103,7 @@ export default function Wallet(props) {
       </div>
     )
     receiveButton = (
-      <Button key="receive" onClick={()=>{setQr(selectedAddress)}}>
+      <Button className="primary bl-border" key="receive" onClick={()=>{setQr(selectedAddress)}}>
         <QrcodeOutlined /> Receive
       </Button>
     )
@@ -115,7 +115,7 @@ export default function Wallet(props) {
       <Modal
         visible={open}
         title={
-          <div>
+          <div className="br-round">
             {selectedAddress?(
               <Address value={selectedAddress} ensProvider={props.ensProvider}/>
             ):<Spin />}
@@ -131,7 +131,7 @@ export default function Wallet(props) {
         }}
         footer={[
           receiveButton,
-          <Button key="submit" type="primary" disabled={!amount || !toAddress || qr} loading={false} onClick={()=>{
+          <Button className="btn success fl-left gr-border" key="submit" type="success" disabled={!amount || !toAddress || qr} loading={false} onClick={()=>{
             const tx = Transactor(props.provider)
             tx({
               to: toAddress,
