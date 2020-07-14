@@ -1,3 +1,72 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'Sen', sans-serif;
+}
+
+#components-layout-demo-side .logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+.menu-posture {
+  z-index: 100;
+  position: absolute;
+  top: 18px;
+  left: -4px;
+}
+
+.main-frame {
+  margin: 0.1rem 3.1rem;
+}
+
+.mini-bar {
+  font-size: 0.3rem;
+}
+
+.chat-box {
+	margin: 0.1rem 5.1rem;
+	text-align: left;
+}
+
+.wrap-form {
+	margin-left: 30px;
+}
+.fl-left {
+	float: left;
+	
+}
+.tx-left {
+	text-align: left;
+}
+
+.bl-border {
+	border-color: blue;
+}
+
+.gr-border {
+	border-color: green;
+}
+
+div.ant-modal-content {
+	border-radius: 15px;
+}
+
+.ant-carousel .slick-slide {
+  text-align: center;
+  height: 160px;
+  line-height: 160px;
+  background: #364d79;
+  overflow: hidden;
+}
+
+.ant-carousel .slick-slide h3 {
+  color: #fff;
 }

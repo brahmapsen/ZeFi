@@ -39,5 +39,8 @@
     "packages": [
       "packages/*"
     ]
+  },
+  "dependencies": {
+    "react-bootstrap": "^1.2.1"
   }
 }
