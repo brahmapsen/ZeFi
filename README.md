@@ -1,8 +1,8 @@
-# ZEFI INSTRUCTIONS
+# 💾  ZEFI INSTRUCTIONS
 
 Requirements: [NodeJS>=10](https://nodejs.org/en/download/) plus [Yarn](https://classic.yarnpkg.com/en/docs/install/) and [Git](https://git-scm.com/downloads)
 
-💾  Open 3 tabs (A, B, C), run the following commands (remove the Tab #)
+Open 3 tabs (A, B, C), run the following commands (remove the Tab #)
 
 1. yarn install (Tab A)
 
