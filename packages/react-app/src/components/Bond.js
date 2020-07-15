@@ -96,7 +96,7 @@ class Bond extends React.Component {
         </Form.Item>
         <Form.Item {...tailLayout}>
           <Button type="primary" htmlType="submit">
-            Submit
+            Bond
           </Button>
           <Button htmlType="button" onClick={this.onReset}>
             Reset
