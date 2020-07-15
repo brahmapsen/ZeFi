@@ -1,4 +1,4 @@
-# 💾  ZEFI INSTRUCTIONS
+# 💾  ZEFI SETUP
 
 Requirements: [NodeJS>=10](https://nodejs.org/en/download/) plus [Yarn](https://classic.yarnpkg.com/en/docs/install/) and [Git](https://git-scm.com/downloads)
 
