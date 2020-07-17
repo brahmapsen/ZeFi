@@ -4,17 +4,16 @@ import { Comment, Avatar } from 'antd';
 const Chatter = ({ children }) => (
   <Comment
     actions={[<span key="comment-nested-reply-to">Reply to</span>]}
-    author={<a>Han Solo</a>}
+    author={<a>Vitalik Buterin</a>}
     avatar={
       <Avatar
         src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-        alt="Han Solo"
+        alt="Vitalik Buterin"
       />
     }
     content={
       <p>
-        We protect user data with good design
-        resources (<i>decentralize finance</i>).
+        A <b>smart contract</b> is a mechanism involving digital assets and two or more parties, where some or all of the parties put assets in, and assets are automatically redistributed among those parties according to a formula based on certain data that is not known at the time the contract is initiated.
       </p>
     }
   >

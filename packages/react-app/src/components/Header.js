@@ -7,12 +7,12 @@ export default function Header(props) {
   return (
     <>
       <div onClick={()=>{
-        window.open("https://github.com/zkfs");
+        window.open("https://github.com/DeFiChat");
       }}>
         <PageHeader
-          title="ZeFi 💭"
+          title="ZERO 💭"
           subTitle=""
-          style={{cursor:'pointer'}}
+          style={{cursor:'pointer', fontWeieght:'800'}}
         />      
       </div>
       <MenuButton className="menu-posture"/>

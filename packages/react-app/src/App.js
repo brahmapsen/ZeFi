@@ -15,7 +15,6 @@ import { ApiFilled, AppleOutlined, AndroidOutlined, MessageTwoToned, MenuOutline
   ContainerOutlined,
   MailOutlined,
 } from '@ant-design/icons';
-//import { Line } from '@antv/g2plot';
 import { Transactor } from "./helpers"
 import { useExchangePrice, useGasPrice, useContractLoader, useContractReader } from "./hooks"
 import { Header, Account, Provider, Faucet, Ramp, Address, Contract, } from "./components"
@@ -154,7 +153,7 @@ function App() {
           price={price}
         />
       </div>
-      <Tabs defaultActiveKey="2">
+      <Tabs defaultActiveKey="3">
         <TabPane
           tab={
             <span>
@@ -163,6 +162,47 @@ function App() {
             </span>
           }
           key="1"
+        >   
+        
+          <Uniform />
+          <div style={{position:'fixed',textAlign:'right',right:0,bottom:20,padding:10}}>
+            <Row align="middle" gutter={4}>
+              <Col span={10}>
+                <Provider name={"mainnet"} provider={mainnetProvider} />
+              </Col>
+              <Col span={6}>
+                <Provider name={"local"} provider={localProvider} />
+              </Col>
+              <Col span={8}>
+                <Provider name={"injected"} provider={injectedProvider} />
+              </Col>
+            </Row>
+          </div>
+          <div style={{position:'fixed',textAlign:'left',left:0,bottom:20,padding:10}}>
+            <Row align="middle" gutter={4}>
+              <Col span={9}>
+                <Ramp
+                  price={price}
+                  address={address}
+                />
+              </Col>
+              <Col span={15}>
+                <Faucet
+                  localProvider={localProvider}
+                  price={price}
+                />
+              </Col>
+            </Row>
+          </div>                    
+        </TabPane>
+        <TabPane
+          tab={
+            <span>
+              <CodeOutlined />
+              BONDS
+            </span>
+          }
+          key="2"
         >
           <div className="main-frame">
             <div style={{padding:32,textAlign: "left"}}>
@@ -205,47 +245,7 @@ function App() {
             <div style={{padding:32,textAlign: "left"}}>
               {attestationDisplay}
             </div>
-          </div>        
-        </TabPane>
-        <TabPane
-          tab={
-            <span>
-              <CodeOutlined />
-              BONDS
-            </span>
-          }
-          key="2"
-        >
-          <Uniform />
-          <div style={{position:'fixed',textAlign:'right',right:0,bottom:20,padding:10}}>
-            <Row align="middle" gutter={4}>
-              <Col span={10}>
-                <Provider name={"mainnet"} provider={mainnetProvider} />
-              </Col>
-              <Col span={6}>
-                <Provider name={"local"} provider={localProvider} />
-              </Col>
-              <Col span={8}>
-                <Provider name={"injected"} provider={injectedProvider} />
-              </Col>
-            </Row>
-          </div>
-          <div style={{position:'fixed',textAlign:'left',left:0,bottom:20,padding:10}}>
-            <Row align="middle" gutter={4}>
-              <Col span={9}>
-                <Ramp
-                  price={price}
-                  address={address}
-                />
-              </Col>
-              <Col span={15}>
-                <Faucet
-                  localProvider={localProvider}
-                  price={price}
-                />
-              </Col>
-            </Row>
-          </div>            
+          </div>     
         </TabPane>
         <TabPane
           tab={
@@ -258,30 +258,18 @@ function App() {
         >
           <Carousel effect="fade">
             <div>
-              <h3>1</h3>
+              <h3>BITCOIN</h3>
             </div>
             <div>
-              <h3>2</h3>
+              <h3>ETHEREUM</h3>
             </div>
             <div>
-              <h3>3</h3>
+              <h3>FILECOIN</h3>
             </div>
             <div>
-              <h3>4</h3>
+              <h3>TIMESWAP</h3>
             </div>
-          </Carousel>
-          <div className="chat-box">
-            <Chatter>
-              <Chatter/>
-              <Chatter>
-                <Chatter/>
-                <Chatter/>
-              </Chatter>
-              <Chatter>
-                <Chatter/>              
-              </Chatter>
-            </Chatter>
-          </div>
+          </Carousel> 
         </TabPane> 
         <TabPane
           tab={
@@ -292,7 +280,29 @@ function App() {
           }
           key="4"
         >
-          <Uniform />
+          <Carousel effect="fade">
+            <div>
+              <h3>BITCOIN</h3>
+            </div>
+            <div>
+              <h3>ETHEREUM</h3>
+            </div>
+            <div>
+              <h3>FILECOIN</h3>
+            </div>
+            <div>
+              <h3>TIMESWAP</h3>
+            </div>
+          </Carousel>
+          <div className="chat-box">
+            <Chatter/>
+            <Uniform />
+            <Chatter>
+              <Chatter>                
+                <Chatter/>              
+              </Chatter>
+            </Chatter>
+          </div>        
         </TabPane>                
         <TabPane
           tab={
@@ -303,18 +313,15 @@ function App() {
           }
           key="5"
         >
-          Tab 5: exchange for FILE coins
+          {<div style={{padding:64,textAlign: "left"}}>
+            <Contract
+              name={"Attestor"}
+              provider={injectedProvider}
+              address={address}
+            />
+          </div>}          
         </TabPane>
       </Tabs>
-
-      {/*<div style={{padding:64,textAlign: "left"}}>
-        <Contract
-          name={"Attestor"}
-          provider={injectedProvider}
-          address={address}
-        />
-      </div>*/}
-
     </div>
   );
 }

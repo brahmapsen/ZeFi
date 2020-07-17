@@ -101,7 +101,7 @@ export default function Contract(props) {
                   <Input
                     placeholder="transaction value"
                     onChange={e => {
-                      console.log("CHJANGE");
+                      console.log("CHANGE");
                       const newValues = { ...values };
                       newValues["valueOf" + fn.name] = e.target.value;
                       console.log("SETTING:", newValues);
@@ -158,7 +158,7 @@ export default function Contract(props) {
                 {afterForm}
                 <Input
                   onChange={e => {
-                    console.log("CHJANGE");
+                    console.log("CHANGE");
                     const newValues = { ...values };
                     newValues[fn.name] = e.target.value;
                     console.log("SETTING:", newValues);
@@ -235,9 +235,9 @@ export default function Contract(props) {
   return (
     <Card
       title={
-        <div>
-          {props.name}
-          <div style={{ float: "right" }}>
+        <div style={{ float: "right" }}>
+          *Authorized
+          <div style={{ float: "left" }}>
             <Account
               address={address}
               localProvider={props.provider}
@@ -251,7 +251,7 @@ export default function Contract(props) {
         </div>
       }
       size="large"
-      style={{ width: 550, marginTop: 25 }}
+      style={{ width: 550, marginTop: 0 }}
       loading={display && display.length <= 0}
     >
       {display}
