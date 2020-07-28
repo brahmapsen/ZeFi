@@ -36,7 +36,7 @@ class Bond extends React.Component {
 
   onFill = () => {
     this.formRef.current.setFieldsValue({
-      note: 'ETHBTC',
+      note: 'BTCETH',
       side: 'UTXO (Log)',
     });
   };
@@ -45,8 +45,8 @@ class Bond extends React.Component {
     return (
       <Form {...layout} ref={this.formRef} name="control-ref" onFinish={this.onFinish}>
         <Form.Item
-          name="note"
-          label="Notes"
+          name="info"
+          label="Info"
           rules={[
             {
               required: true,
@@ -69,8 +69,8 @@ class Bond extends React.Component {
             onChange={this.onAssetChange}
             allowClear
           >
-            <Option value="other">NEUTRAL</Option>
             <Option value="short">SHORT</Option>
+            <Option value="other">NEUTRAL</Option>
             <Option value="long">LONG</Option>            
           </Select>
         </Form.Item>

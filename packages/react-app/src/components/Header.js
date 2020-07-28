@@ -10,7 +10,7 @@ export default function Header(props) {
         window.open("https://github.com/DeFiChat");
       }}>
         <PageHeader
-          title="ZERO 💭"
+          title="ZERO💭"
           subTitle=""
           style={{cursor:'pointer', fontWeieght:'800'}}
         />      

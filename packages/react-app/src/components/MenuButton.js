@@ -11,6 +11,8 @@ import { ApiFilled, AppleOutlined, AndroidOutlined, MessageTwoToned, MenuOutline
   MailOutlined,
 } from '@ant-design/icons';
 
+//"💭" : "⛓"
+
 const { SubMenu } = Menu;
 
 class MenuButton extends React.Component {

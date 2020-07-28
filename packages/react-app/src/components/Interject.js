@@ -48,7 +48,7 @@ class Interject extends React.Component {
         value: '',
         comments: [
           {
-            author: 'Han Solo',
+            author: 'Hal Finney',
             avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
             content: <p>{this.state.value}</p>,
             datetime: moment().fromNow(),

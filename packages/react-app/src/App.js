@@ -20,6 +20,7 @@ import { useExchangePrice, useGasPrice, useContractLoader, useContractReader } f
 import { Header, Account, Provider, Faucet, Ramp, Address, Contract, } from "./components"
 import Bond from "./components/Bond"
 import Chatter from "./components/Chatter"
+//import DataTable from "./components/DataTable"
 import SideBar from "./components/Bread"
 import Interject from "./components/Interject"
 import MenuButton from "./components/MenuButton"
@@ -158,13 +159,11 @@ function App() {
           tab={
             <span>
               <SwitcherOutlined />
-              APPS
+              APP$
             </span>
           }
           key="1"
         >   
-        
-          <Uniform />
           <div style={{position:'fixed',textAlign:'right',right:0,bottom:20,padding:10}}>
             <Row align="middle" gutter={4}>
               <Col span={10}>
@@ -204,9 +203,10 @@ function App() {
           }
           key="2"
         >
+          <Uniform />        
           <div className="main-frame">
             <div style={{padding:32,textAlign: "left"}}>
-              Content Name: <Input value="" onChange={(e)=>{
+              Content Link: <Input value="" onChange={(e)=>{
               }} />
               <Button disbaled="false" style={{margin:8}} size="large" shape="round" type="primary" >
                 Claim
@@ -251,7 +251,7 @@ function App() {
           tab={
             <span>
               <SolutionOutlined />
-              CHAT
+              CODES
             </span>
           }
           key="3"
@@ -282,16 +282,16 @@ function App() {
         >
           <Carousel effect="fade">
             <div>
-              <h3>BITCOIN</h3>
+              <h3>AAVE</h3>
             </div>
             <div>
-              <h3>ETHEREUM</h3>
+              <h3>BALANCER</h3>
             </div>
             <div>
-              <h3>FILECOIN</h3>
+              <h3>COMPOUND</h3>
             </div>
             <div>
-              <h3>TIMESWAP</h3>
+              <h3>DYDX</h3>
             </div>
           </Carousel>
           <div className="chat-box">

@@ -1,7 +1,12 @@
+import React from 'react';
+import BootstrapTable from 'react-bootstrap-table-next';
 import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
 
 const { SearchBar } = Search;
 //...
+
+const products = ['One', 'Two','Three'];
+const columns = ['Index', 'Name'];
 
 <ToolkitProvider
   keyField="id"

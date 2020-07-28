@@ -58,11 +58,11 @@ const Uniform = () => {
                 children: [
                   {
                     title: '1inch',
-                    value: 'inch',
+                    value: 'chi',
                   },
                   {
                     title: 'AAVE',
-                    value: 'aave',
+                    value: 'atokens',
                   },
                   {
                     title: 'Balancer',
@@ -103,6 +103,10 @@ const Uniform = () => {
                 label: '#CDP',
                 children: [
                   {
+                    value: 'bank',
+                    label: 'BANK',
+                  },
+                  {
                     value: 'dai',
                     label: 'DAI',
                   },
@@ -110,6 +114,10 @@ const Uniform = () => {
                     value: 'eth',
                     label: 'ETH',
                   },
+                  {
+                    value: 'usd',
+                    label: 'USD',
+                  },                  
                 ],
               },
               {
@@ -117,24 +125,28 @@ const Uniform = () => {
                 label: '#FARM',
                 children: [
                   {
-                    value: 'comp',
-                    label: 'COMP',
-                  },
-                  {
-                    value: 'tusd',
-                    label: 'TUSD',
-                  },
-                  {
-                    value: 'bat',
-                    label: 'BAT',
-                  },
-                  {
-                    value: 'wbtc',
-                    label: 'WBTC',
+                    value: 'rbtc',
+                    label: 'rBTC',
                   }, 
                   {
-                    value: 'gas',
-                    label: 'GSN',
+                    value: 'comp',
+                    label: 'COMP',
+                  },                                    
+                  {
+                    value: 'meta',
+                    label: 'META',
+                  },
+                  {
+                    value: 'usdc',
+                    label: 'USDC',
+                  },
+                  {
+                    value: 'weth',
+                    label: 'WETH',
+                  },                                    
+                  {
+                    value: 'yfi',
+                    label: 'YFI',
                   },                                    
                 ],              
               },
@@ -143,8 +155,12 @@ const Uniform = () => {
                 label: '#STAKE',
                 children: [
                   {
-                    value: 'lqd',
-                    label: 'LQD',
+                    value: 'info',
+                    label: 'INFO',
+                  },
+                  {
+                    value: 'time',
+                    label: 'TIME',
                   },
                   {
                     value: 'peer',
@@ -161,20 +177,20 @@ const Uniform = () => {
                 label: '#3PT',
                 children: [
                   {
+                    value: 'apy',
+                    label: 'APY',
+                  },  
+                  {
                     value: 'gas',
                     label: 'GAS',
                   },
                   {
-                    value: 'usd',
-                    label: 'USD',
+                    value: 'cpi',
+                    label: 'CPI',
                   },
                   {
-                    value: 'eth',
-                    label: 'ETH',
-                  },  
-                  {
-                    value: 'apy',
-                    label: 'APY',
+                    value: 'ztc',
+                    label: 'ZTC',
                   },                                  
                 ],              
               },                            

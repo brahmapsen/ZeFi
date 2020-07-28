@@ -235,7 +235,7 @@ export default function Contract(props) {
   return (
     <Card
       title={
-        <div style={{ float: "right" }}>
+        <div style={{ float: "right", color: "red" }}>
           *Authorized
           <div style={{ float: "left" }}>
             <Account
