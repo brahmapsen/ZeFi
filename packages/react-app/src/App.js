@@ -25,6 +25,11 @@ import SideBar from "./components/Bread"
 import Interject from "./components/Interject"
 import MenuButton from "./components/MenuButton"
 import Uniform from "./components/Uniform"
+
+import AppStore from "./components/dappstore/AppStore"
+
+
+
 const { TextArea } = Input;
 const { BufferList } = require('bl')
 
@@ -164,6 +169,9 @@ function App() {
           }
           key="1"
         >   
+          {/* INSERT BRAHMA COMPONENT
+          <DappStore /> */}
+          <AppStore />
           <div style={{position:'fixed',textAlign:'right',right:0,bottom:20,padding:10}}>
             <Row align="middle" gutter={4}>
               <Col span={10}>
